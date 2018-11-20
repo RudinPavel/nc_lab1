@@ -1,5 +1,5 @@
 //package com.company;
-//import org.joda.time.LocalDate;
+import org.joda.time.LocalDate;
 //import java.util.Date;
 enum Gender {male, female}
 
@@ -7,7 +7,7 @@ public class Person {
     private int id;
     private String fullName;
     private Gender gender;
-    //private LocalDate birthday;
+    private LocalDate birthday;
     private String eyeColor;
 
     public int getId() {
@@ -44,6 +44,6 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public int getAge(){ return LocalDate.now().getYear() - birthday.getYear();} // использовать класс периода
+    public int getAge() { return LocalDate.now().getYear() - birthday.getYear();} // использовать класс периода
 }
 */
