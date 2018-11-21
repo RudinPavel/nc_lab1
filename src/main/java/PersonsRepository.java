@@ -6,20 +6,20 @@ public class PersonsRepository {
 
     public void add(Person p) {
         if (checkCurrentId(p.getId())) {
-            Person[] newPersons = new Person[size + 1];
+            size++;
+            Person[] newPersons = new Person[size];
             for (int i = 0; i < persons.length; i++) {
                 newPersons[i] = persons[i];
             }
             newPersons[size-1] = p;
             persons = newPersons;
-            size++;
         }
     }
 
     private boolean checkCurrentId(int id) {
         for (Person p : persons) {
             if (p.getId() == id) { // допустимо сравнивать по Integer
-                System.out.println("Current id already exist!");
+                // System.out.println("Current id already exist!");
                 return false;
             }
         }
@@ -43,7 +43,7 @@ public class PersonsRepository {
     }
 
     public void removeLast() {
-        this.persons[size] = null;
+        this.persons[size - 1] = null;
         size--;
     }
 

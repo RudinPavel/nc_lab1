@@ -1,6 +1,8 @@
 //package com.company;
 import org.joda.time.LocalDate;
-//import java.util.Date;
+import org.joda.time.Period;
+import java.util.Date;
+
 enum Gender {male, female}
 
 public class Person {
@@ -22,7 +24,8 @@ public class Person {
         return gender.toString();
     }
 
-    //public LocalDate getBirthday(){ return birthday; }
+    public LocalDate getBirthday(){ return birthday; }
+
     public String getEyeColor() {
         return eyeColor;
     }
@@ -32,18 +35,19 @@ public class Person {
     }
 
 
-    public Person(int id, String fullName, String gender, String eyeColor) {
+    public Person(int id, String fullName, String gender, String birthday, String eyeColor) {
         this.id = id;
         this.fullName = fullName;
         this.gender = Gender.valueOf(gender);
+        this.birthday = LocalDate.parse(birthday);
         this.eyeColor = eyeColor; // comm
     }
-}
-/*
-    Person(LocalDate birthday){
-        this.birthday = birthday;
-    }
 
-    public int getAge() { return LocalDate.now().getYear() - birthday.getYear();} // использовать класс периода
+    public int getAge() {
+        Date current = new Date();
+        System.out.println(current.getYear());
+        //return p.getYears();
+        return 1;
+                //LocalDate.now().getYear() - birthday.getYear();
+    } // использовать класс периода
 }
-*/
