@@ -44,10 +44,11 @@ public class Person {
     }
 
     public int getAge() {
-        Date current = new Date();
-        System.out.println(current.getYear());
-        //return p.getYears();
-        return 1;
+        Period p = new Period();
+        return p.getYears();
+        //return 1;
                 //LocalDate.now().getYear() - birthday.getYear();
     } // использовать класс периода
+    // нужно будет осваивать логирование, то есть как писать логи. Нужно к проекту добавить поддержку этого механизма
+    // log4g - это framework
 }

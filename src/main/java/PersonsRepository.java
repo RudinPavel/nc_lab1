@@ -11,15 +11,14 @@ public class PersonsRepository {
             for (int i = 0; i < persons.length; i++) {
                 newPersons[i] = persons[i];
             }
-            newPersons[size-1] = p;
+            newPersons[size - 1] = p;
             persons = newPersons;
         }
     }
 
     private boolean checkCurrentId(int id) {
         for (Person p : persons) {
-            if (p.getId() == id) { // допустимо сравнивать по Integer
-                // System.out.println("Current id already exist!");
+            if (p.getId() == id) {
                 return false;
             }
         }

@@ -7,7 +7,7 @@ public class Main {
         p = new Person(1, "Brudin P.I.", "male", "1940-11-12","green");
         pr.add(p);
         p = new Person(2, "Titova N.A..", "female","1940-11-12" ,"blue");
-        p.getAge();
+        // p.getAge();
         pr.add(p);
         System.out.println(pr.printPersons());
         // pr.removeLast();
